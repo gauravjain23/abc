@@ -953,6 +953,9 @@
 
     <!-- SCRIPTS -->
     <script type="text/javascript" src="https://mdbootstrap.com/previews/docs/latest/js/compiled.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	
 
     <script>
         new WOW().init();
@@ -963,6 +966,20 @@
 	$('#nav-icon3').click(function(){
 		$(this).toggleClass('open');
 	});
+});
+    </script>
+	    <script>
+      
+$(".carousel").swipe({
+
+  swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+
+    if (direction == 'left') $(this).carousel('next');
+    if (direction == 'right') $(this).carousel('prev');
+
+  },
+  allowPageScroll:"vertical"
+
 });
     </script>
 </body>
